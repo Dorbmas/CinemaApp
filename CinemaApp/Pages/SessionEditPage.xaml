@@ -1,0 +1,36 @@
+﻿<Page x:Class="CinemaApp.Pages.SessionEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CinemaApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1440"
+      Title="Добавление/редактирование сеансов">
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Фильм:" FontSize="20" Margin="5" Width="150"></TextBlock>
+                <ComboBox SelectedItem="{Binding Movies}" FontSize="20" Width="200" Margin="5" Height="auto" Name="cbMovie" DisplayMemberPath="Title"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Дата:" FontSize="20" Margin="5" Width="150"></TextBlock>
+                <DatePicker SelectedDate="{Binding Date}" FontSize="20" Width="200" Margin="5"></DatePicker>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Время:" FontSize="20" Margin="5" Width="150"></TextBlock>
+                <TextBox Text="{Binding Time}" FontSize="20" Width="200" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Зал:" FontSize="20" Margin="5" Width="150"></TextBlock>
+                <ComboBox SelectedItem="{Binding Halls}" FontSize="20" Width="200" Margin="5" Name="cbHall" DisplayMemberPath="Title"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Цена:" FontSize="20" Margin="5" Width="150"></TextBlock>
+                <TextBox Text="{Binding Price}" FontSize="20" Width="200" Margin="5"></TextBox>
+            </StackPanel>
+            <Button Content="Сохранить" Height="50" Background="LightBlue" BorderBrush="LightBlue" Width="250" FontSize="20" Margin="5" Name="btnSave" Click="btnSave_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

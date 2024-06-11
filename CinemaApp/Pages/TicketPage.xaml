@@ -1,0 +1,42 @@
+﻿<Page x:Class="CinemaApp.Pages.TicketPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CinemaApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1440"
+      Title="Билет">
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock FontSize="30" Margin="5" Name="tbTitle"></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Дата:" FontSize="20" Margin="5"></TextBlock>
+                <TextBlock FontSize="20" Margin="5" Name="tbDate"></TextBlock>
+                <TextBlock Text="," FontSize="20" Margin="5"></TextBlock>
+                <TextBlock Text="Время:" FontSize="20" Margin="5"></TextBlock>
+                <TextBlock FontSize="20" Margin="5" Name="tbTime"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Зал: " FontSize="20" Margin="5"></TextBlock>
+                <TextBlock FontSize="20" Margin="5" Name="tbHall"></TextBlock>
+                <TextBlock Text="," FontSize="20" Margin="5"></TextBlock>
+                <TextBlock Text="Ряд:" FontSize="20" Margin="5"></TextBlock>
+                <TextBlock FontSize="20" Margin="5" Name="tbRow"></TextBlock>
+                <TextBlock Text="," FontSize="20" Margin="5"></TextBlock>
+                <TextBlock Text="Место:" FontSize="20" Margin="5"></TextBlock>
+                <TextBlock FontSize="20" Margin="5" Name="tbSeat"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="К оплате:" FontSize="30" Margin="5"></TextBlock>
+                <TextBlock FontSize="30" Margin="5" Name="tbPrice"></TextBlock>
+                <TextBlock Text="руб." FontSize="30" Margin="5"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Оплатить" Height="50" Background="LightBlue" BorderBrush="LightBlue" Width="250" FontSize="20" Margin="5" Name="btnPay" Click="btnPay_Click"></Button>
+                <Button Content="Оплатить баллами" Background="White" BorderBrush="LightBlue" Height="50" Width="250" FontSize="20" Margin="5" Name="btnPayPoints" Click="btnPayPoints_Click"></Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

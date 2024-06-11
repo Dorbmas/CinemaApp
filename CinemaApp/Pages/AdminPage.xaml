@@ -1,0 +1,26 @@
+﻿<Page x:Class="CinemaApp.Pages.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CinemaApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1440"
+      Title="Страница администратора">
+
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Фильмы" Height="50" Width="250" FontSize="20" Background="LightBlue" BorderBrush="LightBlue" Margin="5" Name="btnMovies" Click="btnMovies_Click"></Button>
+                <Button Content="Сеансы" Height="50" Width="250" FontSize="20" Background="LightBlue" BorderBrush="LightBlue" Margin="5" Name="btnSessions" Click="btnSessions_Click"></Button>
+                <Button Content="Жанры" Height="50" Width="250" FontSize="20" Background="LightBlue" BorderBrush="LightBlue" Margin="5" Name="btnGenres" Click="btnGenres_Click"></Button>
+                <Button Content="Страны" Height="50" Width="250" FontSize="20" Background="LightBlue" BorderBrush="LightBlue" Margin="5" Name="btnCountries" Click="btnCountries_Click"></Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Залы" Height="50" Width="250" FontSize="20" Margin="5" Background="LightBlue" BorderBrush="LightBlue" Name="btnHalls" Click="btnHalls_Click"></Button>
+                <Button Content="Билеты" Height="50" Width="250" FontSize="20" Margin="5" Background="LightBlue" BorderBrush="LightBlue" Name="btnTickets" Click="btnTickets_Click"></Button>
+                <Button Content="Пользователи" Height="50" Width="250" FontSize="20" Margin="5" Background="LightBlue" BorderBrush="LightBlue" Name="btnUsers" Click="btnUsers_Click"></Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
