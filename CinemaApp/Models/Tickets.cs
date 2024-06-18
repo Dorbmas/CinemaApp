@@ -17,6 +17,13 @@ namespace CinemaApp.Models
     {
         public int ID { get; set; }
         public System.DateTime Date { get; set; }
+        public string NormalDate
+        {
+            get
+            {
+                return Date.ToString("dd.MM.yyyy");
+            }
+        }
         public System.TimeSpan Time { get; set; }
         public int HallID { get; set; }
         public string HallName
@@ -39,8 +46,15 @@ namespace CinemaApp.Models
                 return movieName.Title;
             }
         }
-        public Nullable<System.TimeSpan> MovieTime { get; set; }
-    
+        public System.TimeSpan MovieTime { get; set; }
+        public string TimeWithoutSecond
+        {
+            get
+            {
+                return MovieTime.ToString(@"hh\:mm");
+            }
+        }
+
         public virtual Halls Halls { get; set; }
         public virtual Movies Movies { get; set; }
     }

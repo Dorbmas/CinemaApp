@@ -35,8 +35,8 @@ namespace CinemaApp.Models
                 return genreName.Genre;
             }
         }
-        public string Duration { get; set; }
-        public string AgeRating { get; set; }
+        public int Duration { get; set; }
+        public int AgeRating { get; set; }
         public string Description { get; set; }
         public byte[] Image { get; set; }
     

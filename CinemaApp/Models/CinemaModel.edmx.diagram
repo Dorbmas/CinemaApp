@@ -4,18 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8b5ec79b21a24bd9aa85e46104b2423d" Name="Diagram1">
-        <EntityTypeShape EntityType="CinemaModel.Countries" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="CinemaModel.Genres" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="CinemaModel.Halls" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="CinemaModel.HallTypes" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CinemaModel.Movies" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="CinemaModel.Roles" Width="1.5" PointX="5.75" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="CinemaModel.RowsAndSeats" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CinemaModel.Sessions" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CinemaModel.sysdiagrams" Width="1.5" PointX="10.75" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CinemaModel.Tickets" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CinemaModel.Users" Width="1.5" PointX="8" PointY="8.625" IsExpanded="true" />
+      <Diagram DiagramId="baa362eac8304fa78c0a732a6dfa0033" Name="Diagram1">
+        <EntityTypeShape EntityType="CinemaModel.Countries" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Genres" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Halls" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.HallTypes" Width="1.5" PointX="8.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Movies" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Roles" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.RowsAndSeats" Width="1.5" PointX="10.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Sessions" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Tickets" Width="1.5" PointX="8.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Users" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
         <AssociationConnector Association="CinemaModel.FK_Movies_Countries" ManuallyRouted="false" />
         <AssociationConnector Association="CinemaModel.FK_Movies_Genres" ManuallyRouted="false" />
         <AssociationConnector Association="CinemaModel.FK_RowsAndSeats_Halls" ManuallyRouted="false" />
@@ -25,6 +25,7 @@
         <AssociationConnector Association="CinemaModel.FK_Sessions_Movies" ManuallyRouted="false" />
         <AssociationConnector Association="CinemaModel.FK_Tickets_Movies" ManuallyRouted="false" />
         <AssociationConnector Association="CinemaModel.FK_Users_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.FK_RowsAndSeats_Sessions" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

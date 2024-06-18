@@ -38,7 +38,7 @@
                 <TextBlock Text="Роль:" FontSize="20" Margin="5" Width="150"></TextBlock>
                 <ComboBox SelectedItem="{Binding Roles}" FontSize="20" Margin="5" Width="200" Name="cbRole" DisplayMemberPath="Role"></ComboBox>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" Name="spPoints">
                 <TextBlock Text="Баллы:" FontSize="20" Margin="5" Width="150"></TextBlock>
                 <TextBlock Text="{Binding Points}" FontSize="20" Margin="5" Width="200"></TextBlock>
             </StackPanel>

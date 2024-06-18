@@ -57,7 +57,7 @@ namespace CinemaApp.Pages
 
             tbTitle.Text = MovieName;
             tbDate.Text = SessionDate.ToString("dd MMMM");
-            tbTime.Text = SessionTime.ToString();
+            tbTime.Text = SessionTime.ToString(@"hh\:mm");
             tbPrice.Text = Price.ToString();
             tbHall.Text = _currentSeat.HallID.ToString();
             tbRow.Text = _currentSeat.Row.ToString();

@@ -46,6 +46,11 @@ namespace CinemaApp.Pages
                 tbLogin.IsEnabled = false;
             }
 
+            if (RoleID != 3)
+            {
+                spPoints.Visibility = Visibility.Hidden;
+            }
+
             cbRole.ItemsSource = CinemaEntities.GetContext().Roles.ToList();
         }
 

@@ -67,9 +67,9 @@ namespace CinemaApp.Pages
                 errors.AppendLine("Укажите страну-производитель фильма!");
             if (_currentMovie.Genres == null)
                 errors.AppendLine("Укажите жанр фильма!");
-            if (string.IsNullOrEmpty(_currentMovie.Duration))
+            if (_currentMovie.Duration < 0)
                 errors.AppendLine("Введите длительность фильма!");
-            if (string.IsNullOrEmpty(_currentMovie.AgeRating))
+            if (_currentMovie.AgeRating < 0 || _currentMovie.AgeRating > 100)
                 errors.AppendLine("Введите возрастное ограничение фильма!");
             if (string.IsNullOrEmpty(_currentMovie.Description))
                 errors.AppendLine("Введите описание фильма!");

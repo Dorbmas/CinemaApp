@@ -33,7 +33,10 @@
                     </Image>
                     <StackPanel Orientation="Vertical" Grid.Row="1">
                         <TextBlock Text="{Binding Title}" FontSize="30" FontWeight="Bold" Margin="5"></TextBlock>
-                        <TextBlock Text="{Binding AgeRating}" FontSize="30" Margin="5"></TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding AgeRating}" FontSize="30" Margin="5,5,0,5"></TextBlock>
+                        <TextBlock Text="+" FontSize="30" Margin="0,5,5,5"></TextBlock>
+                    </StackPanel> 
                         <TextBlock Text="{Binding GenreName}" FontSize="20" Margin="5"></TextBlock>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="От" FontSize="20" Margin="5"></TextBlock>
@@ -59,7 +62,7 @@
                                     <RowDefinition Height="auto"></RowDefinition>
                                     <RowDefinition Height="auto"></RowDefinition>
                                 </Grid.RowDefinitions>
-                            <Button Content="{Binding Time}" Width="200" Background="LightBlue" BorderBrush="LightBlue" FontSize="30" Margin="5" Name="btnTime" Click="btnTime_Click"></Button>
+                            <Button Content="{Binding TimeWithoutSecond}" Width="200" Background="LightBlue" BorderBrush="LightBlue" FontSize="30" Margin="5" Name="btnTime" Click="btnTime_Click"></Button>
                                 <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
                                     <TextBlock Text="{Binding Price}" FontSize="20" Margin="5"></TextBlock>
                                 <TextBlock Text="руб." FontSize="20" Margin="5"></TextBlock>
@@ -81,7 +84,7 @@
                                 <RowDefinition Height="auto"></RowDefinition>
                                 <RowDefinition Height="auto"></RowDefinition>
                             </Grid.RowDefinitions>
-                            <Button Content="{Binding Time}" Width="200" Background="LightBlue" BorderBrush="LightBlue" FontSize="30" Margin="5" Name="btnTime" Click="btnTime_Click"></Button>
+                            <Button Content="{Binding TimeWithoutSecond}" Width="200" Background="LightBlue" BorderBrush="LightBlue" FontSize="30" Margin="5" Name="btnTime" Click="btnTime_Click"></Button>
                             <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
                                 <TextBlock Text="{Binding Price}" FontSize="20" Margin="5"></TextBlock>
                                 <TextBlock Text="руб." FontSize="20" Margin="5"></TextBlock>
@@ -103,7 +106,7 @@
                                     <RowDefinition Height="auto"></RowDefinition>
                                     <RowDefinition Height="auto"></RowDefinition>
                                 </Grid.RowDefinitions>
-                            <Button Content="{Binding Time}" Width="200" Background="LightBlue" BorderBrush="LightBlue" FontSize="30" Margin="5" Name="btnTime" Click="btnTime_Click"></Button>
+                            <Button Content="{Binding TimeWithoutSecond}" Width="200" Background="LightBlue" BorderBrush="LightBlue" FontSize="30" Margin="5" Name="btnTime" Click="btnTime_Click"></Button>
                             <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
                                 <TextBlock Text="{Binding Price}" FontSize="20" Margin="5"></TextBlock>
                                 <TextBlock Text="руб." FontSize="20" Margin="5"></TextBlock>

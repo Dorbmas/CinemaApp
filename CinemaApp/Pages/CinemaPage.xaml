@@ -11,10 +11,21 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="tbClock" HorizontalAlignment="Center" FontSize="40"></TextBlock>
-        <ListView x:Name="lvMovies" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderThickness="0" HorizontalContentAlignment="Center" d:ItemsSource="{d:SampleData ItemCount=5}">
+        <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
+            <TextBlock Text="Сортировка:" FontSize="20" Margin="5"></TextBlock>
+            <ComboBox Width="400" Name="cbSorting" SelectionChanged="cbSorting_SelectionChanged" FontSize="20">
+                <ComboBoxItem Content="По умолчанию"></ComboBoxItem>
+                <ComboBoxItem Content="По возрастанию возрастного рейтинга"></ComboBoxItem>
+                <ComboBoxItem Content="По убыванию возрастного рейтинга"></ComboBoxItem>
+                <ComboBoxItem Content="По возрастанию времени"></ComboBoxItem>
+                <ComboBoxItem Content="По убыванию времени"></ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+        <TextBlock x:Name="tbClock" Grid.Row="1" HorizontalAlignment="Center" FontSize="40"></TextBlock>
+        <ListView x:Name="lvMovies" Grid.Row="2" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderThickness="0" HorizontalContentAlignment="Center" d:ItemsSource="{d:SampleData ItemCount=5}">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>
@@ -39,11 +50,15 @@
                             </Image.Source>
                         </Image>
                         <StackPanel Orientation="Horizontal" Grid.Row="1">
-                            <TextBlock Text="{Binding AgeRating}" FontSize="20" Margin="5"></TextBlock>
+                            <TextBlock Text="{Binding AgeRating}" FontSize="20" Margin="5,5,0,5"></TextBlock>
+                            <TextBlock Text="+" FontSize="20" Margin="0,5,5,5"></TextBlock>
                             <TextBlock Text="{Binding GenreName}" FontSize="20" Margin="5"></TextBlock>
                         </StackPanel>
                         <TextBlock Text="{Binding Title}" FontSize="20" Margin="5" Grid.Row="2"></TextBlock>
-                        <TextBlock Text="{Binding Duration}" FontSize="20" Margin="5" Grid.Row="3"></TextBlock>
+                        <StackPanel Orientation="Horizontal" Grid.Row="3">
+                            <TextBlock Text="{Binding Duration}" FontSize="20" Margin="5"></TextBlock>
+                            <TextBlock Text="мин." FontSize="20" Margin="5"></TextBlock>
+                        </StackPanel>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

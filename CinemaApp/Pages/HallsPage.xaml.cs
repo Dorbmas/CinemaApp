@@ -45,8 +45,8 @@ namespace CinemaApp.Pages
 
         public void SeatsUpdate()
         {
-            var seatsList1 = CinemaEntities.GetContext().RowsAndSeats.Where(x => x.HallID == _currentSession.HallID && x.Row == 1).ToList();
-            var seatsList2 = CinemaEntities.GetContext().RowsAndSeats.Where(x => x.HallID == _currentSession.HallID && x.Row == 2).ToList();
+            var seatsList1 = CinemaEntities.GetContext().RowsAndSeats.Where(x => x.HallID == _currentSession.HallID && x.Row == 1 && x.SessionID == _currentSession.ID).ToList();
+            var seatsList2 = CinemaEntities.GetContext().RowsAndSeats.Where(x => x.HallID == _currentSession.HallID && x.Row == 2 && x.SessionID == _currentSession.ID).ToList();
 
             lvSeats1.ItemsSource = seatsList1;
             lvSeats2.ItemsSource= seatsList2;

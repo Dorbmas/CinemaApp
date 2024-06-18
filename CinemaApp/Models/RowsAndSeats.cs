@@ -9,13 +9,9 @@
 
 namespace CinemaApp.Models
 {
-    using CinemaApp.Classes;
     using System;
     using System.Collections.Generic;
-    using System.Globalization;
     using System.Linq;
-    using System.Net.Sockets;
-    using System.Windows;
 
     public partial class RowsAndSeats
     {
@@ -33,8 +29,10 @@ namespace CinemaApp.Models
         public int Seat { get; set; }
         public int HallTypeID { get; set; }
         public bool Status { get; set; }
-
+        public Nullable<int> SessionID { get; set; }
+    
         public virtual Halls Halls { get; set; }
         public virtual HallTypes HallTypes { get; set; }
+        public virtual Sessions Sessions { get; set; }
     }
 }

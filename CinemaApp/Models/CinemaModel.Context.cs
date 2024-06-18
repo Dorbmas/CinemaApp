@@ -20,7 +20,7 @@ namespace CinemaApp.Models
             : base("name=CinemaEntities")
         {
         }
-        
+
         public static CinemaEntities GetContext()
         {
             if (_context == null)
@@ -28,7 +28,7 @@ namespace CinemaApp.Models
 
             return _context;
         }
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

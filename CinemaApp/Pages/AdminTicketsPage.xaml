@@ -22,7 +22,7 @@
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition Width="120"></ColumnDefinition>
                             <ColumnDefinition Width="125"></ColumnDefinition>
                             <ColumnDefinition Width="400"></ColumnDefinition>
                             <ColumnDefinition Width="auto"></ColumnDefinition>
@@ -33,10 +33,10 @@
                             <ColumnDefinition Width="auto"></ColumnDefinition>
                             <ColumnDefinition Width="auto"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="{Binding Date}" FontSize="20" Margin="5" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Text="{Binding NormalDate}" FontSize="20" Margin="5" VerticalAlignment="Center"></TextBlock>
                         <TextBlock Text="{Binding Time}" FontSize="20" Margin="5" Grid.Column="1" VerticalAlignment="Center"></TextBlock>
                         <TextBlock Text="{Binding MovieName}" FontSize="20" Margin="5" Grid.Column="2" VerticalAlignment="Center"></TextBlock>
-                        <TextBlock Text="{Binding MovieTime}" FontSize="20" Margin="5" Grid.Column="3" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Text="{Binding TimeWithoutSecond}" FontSize="20" Margin="5" Grid.Column="3" VerticalAlignment="Center"></TextBlock>
                         <TextBlock Text="{Binding HallName}" FontSize="20" Margin="5" Grid.Column="4" VerticalAlignment="Center"></TextBlock>
                         <TextBlock Text="{Binding Row}" FontSize="20" Margin="5" Grid.Column="5" VerticalAlignment="Center"></TextBlock>
                         <TextBlock Text="{Binding Seat}" FontSize="20" Margin="5" Grid.Column="6" VerticalAlignment="Center"></TextBlock>

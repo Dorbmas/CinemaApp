@@ -15,9 +15,29 @@ namespace CinemaApp.Models
 
     public partial class Sessions
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Sessions()
+        {
+            this.RowsAndSeats = new HashSet<RowsAndSeats>();
+        }
+    
         public int ID { get; set; }
         public System.DateTime Date { get; set; }
+        public string NormalDate
+        {
+            get
+            {
+                return Date.ToString("dd.MM.yyyy");
+            }
+        }
         public System.TimeSpan Time { get; set; }
+        public string TimeWithoutSecond
+        {
+            get
+            {
+                return Time.ToString(@"hh\:mm");
+            }
+        }
         public int HallID { get; set; }
         public string HallName
         {
@@ -40,5 +60,7 @@ namespace CinemaApp.Models
     
         public virtual Halls Halls { get; set; }
         public virtual Movies Movies { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RowsAndSeats> RowsAndSeats { get; set; }
     }
 }
